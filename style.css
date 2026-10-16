@@ -207,6 +207,35 @@ h2::after {
   font-weight: 500;
 }
 
+/* Featured project card */
+.project-card.featured {
+  border-color: var(--color-accent);
+  border-width: 2px;
+  background: var(--color-accent-light);
+  grid-column: 1 / -1;
+  position: relative;
+}
+
+.featured-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.25rem;
+  align-self: flex-start;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 /* ── Buttons ── */
 .btn {
   display: inline-block;
