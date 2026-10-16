@@ -10,7 +10,7 @@ Live site: [sanjunasunil.github.io](https://sanjunasunil.github.io)
 
 - **About** — Professional summary, stats (500 customer cases analyzed, 10% support case reduction)
 - **Skills** — AI Evaluation & Prompt Engineering, Knowledge & Content Strategy, Developer Documentation, Tools & Collaboration
-- **Portfolio** — Featured project: Google Ads AI Response Evaluation and Guardrails, plus API docs, Docs as Code, and AI Model Card samples
+- **Portfolio** — Google Ads AI Response Evaluation and Guardrails (live demo + GitHub)
 - **Experience** — SAP Labs India, Blue Yonder, Cognizant
 - **Education & Certifications** — Bharathiyar University; Google Ads Certification; Google Prompt Essentials Certification
 - **Contact** — Email and GitHub
