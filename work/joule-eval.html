@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM-as-a-Judge: Joule Evaluation Tool — Sanjuna Sunil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="../index.html" class="nav-back">← Back to portfolio</a>
+    <span class="nav-title">Sanjuna Sunil</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-meta">
+        <span class="case-tag">AI Evaluation</span>
+        <span class="case-tag">SAP Labs India</span>
+        <span class="case-year">2024</span>
+      </div>
+      <h1 class="case-title">LLM-as-a-Judge:<br>Joule Evaluation Tool</h1>
+      <p class="case-summary">Built an AI evaluation platform to assess SAP Joule agent responses against 24 structured quality guidelines — halving evaluation time and driving adoption across User Assistance and UX teams.</p>
+    </div>
+
+    <div class="case-stats">
+      <div class="case-stat">
+        <span class="stat-num">24</span>
+        <span class="stat-label">Quality guidelines</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">2→1h</span>
+        <span class="stat-label">Evaluation time halved</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">120</span>
+        <span class="stat-label">Conversations evaluated</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">~30</span>
+        <span class="stat-label">Colleagues adopted workflow</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANIMATED VISUAL -->
+  <div class="case-visual">
+    <div class="visual-frame">
+      <div class="eval-animation" id="evalAnim">
+        <div class="ea-header">
+          <span class="ea-title">Joule Response Evaluator</span>
+          <span class="ea-status" id="eaStatus">Evaluating...</span>
+        </div>
+        <div class="ea-transcript">
+          <div class="ea-bubble ea-user">How do I create a story report in SuccessFactors?</div>
+          <div class="ea-bubble ea-agent">To create a story report, go to Report Center and select New Story. You can add data sources and build visualisations using the story canvas.</div>
+        </div>
+        <div class="ea-scores" id="eaScores">
+          <div class="ea-row" style="--delay:0.2s">
+            <span class="ea-criterion">Grounding</span>
+            <div class="ea-bar-track"><div class="ea-bar-fill" style="--w:88%;--color:#7ecb8f"></div></div>
+            <span class="ea-score ea-pass">4 / 5</span>
+          </div>
+          <div class="ea-row" style="--delay:0.5s">
+            <span class="ea-criterion">Task completion</span>
+            <div class="ea-bar-track"><div class="ea-bar-fill" style="--w:100%;--color:#7ecb8f"></div></div>
+            <span class="ea-score ea-pass">5 / 5</span>
+          </div>
+          <div class="ea-row" style="--delay:0.8s">
+            <span class="ea-criterion">Tone &amp; clarity</span>
+            <div class="ea-bar-track"><div class="ea-bar-fill" style="--w:80%;--color:#7ecb8f"></div></div>
+            <span class="ea-score ea-pass">4 / 5</span>
+          </div>
+          <div class="ea-row" style="--delay:1.1s">
+            <span class="ea-criterion">Format compliance</span>
+            <div class="ea-bar-track"><div class="ea-bar-fill" style="--w:60%;--color:#f0c040"></div></div>
+            <span class="ea-score ea-warn">3 / 5</span>
+          </div>
+          <div class="ea-row" style="--delay:1.4s">
+            <span class="ea-criterion">Escalation accuracy</span>
+            <div class="ea-bar-track"><div class="ea-bar-fill" style="--w:100%;--color:#7ecb8f"></div></div>
+            <span class="ea-score ea-pass">5 / 5</span>
+          </div>
+        </div>
+        <div class="ea-recommendation" id="eaRec">
+          <span class="ea-rec-label">Improvement recommendation</span>
+          <p class="ea-rec-text">Response does not use the standard numbered-step format required by User Assistance guidelines (Guideline #7). Recommend restructuring navigation instructions as a numbered procedure.</p>
+          <span class="ea-severity ea-sev-med">Severity: Medium</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="case-body">
+
+    <div class="case-section">
+      <span class="cs-label">The Problem</span>
+      <h2 class="cs-heading">Evaluating AI agents by hand took over two hours</h2>
+      <div class="cs-body">
+        <p>SAP Joule is an AI assistant embedded across SAP products. As the User Assistance team began testing Joule's responses, quality reviews were done manually — a reviewer would read through a conversation, cross-reference a set of internal guidelines, and write up findings in a document.</p>
+        <p>With <strong>24 quality guidelines</strong> covering grounding, tone, task completion, format compliance, and escalation accuracy, a single evaluation session took <strong>more than two hours</strong>. There was no structured way to surface quoted evidence, assign severity, or produce consistent improvement recommendations across reviewers.</p>
+        <p>As Joule expanded to more agents and modules, the manual approach couldn't scale. The team needed a repeatable, structured evaluation workflow.</p>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Process</span>
+      <h2 class="cs-heading">Structured criteria, automated scoring, actionable output</h2>
+      <div class="cs-body">
+        <p>I designed and built the evaluation system in three layers:</p>
+      </div>
+      <ul class="cs-list">
+        <li><strong>Evaluation criteria:</strong> Translated 24 internal User Assistance quality guidelines into structured scoring rubrics — each with a definition, scoring scale (1–5), evidence requirements, and severity classification.</li>
+        <li><strong>LLM-as-a-Judge tool:</strong> Built the evaluation platform on SAP AI Core using Claude Code. The tool takes a Joule conversation as input, scores it against all 24 criteria, surfaces quoted evidence from the transcript, assigns a severity level per finding, generates an ideal response, and outputs actionable improvement recommendations.</li>
+        <li><strong>Conversation capture extension:</strong> Built a browser extension to capture complete Joule test conversations from the testing interface and transfer them into the evaluation workflow — eliminating manual copy-paste and formatting errors.</li>
+        <li><strong>Adoption and rollout:</strong> Ran working sessions with the User Assistance and UX teams to introduce the tool, demonstrated on real conversations, and iterated on the output format based on feedback from reviewers.</li>
+      </ul>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Outcome</span>
+      <h2 class="cs-heading">Faster evaluations, consistent quality, team-wide adoption</h2>
+      <div class="outcome-box">
+        <div class="outcome-row">
+          <span class="outcome-num">2h → 1h</span>
+          <span class="outcome-text">Evaluation time cut by approximately 50% — reviewers spend less time cross-referencing guidelines and more time acting on findings.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">120</span>
+          <span class="outcome-text">Test conversations evaluated across 10 Joule agents using the structured workflow.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">~30</span>
+          <span class="outcome-text">Colleagues across User Assistance and UX teams adopted the evaluation workflow, establishing a repeatable standard for assessing AI response quality.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="case-footer">
+    <span class="footer-copy">© 2026 Sanjuna Sunil</span>
+    <nav class="footer-nav">
+      <a href="../index.html#work">← All work</a>
+      <a href="case-reduction.html">Next project →</a>
+    </nav>
+  </footer>
+
+  <style>
+    .eval-animation {
+      background: #1a1033;
+      padding: 2rem;
+      font-family: 'Barlow', sans-serif;
+    }
+
+    .ea-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .ea-title {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .ea-status {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #f0c040;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .ea-transcript {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .ea-bubble {
+      max-width: 72%;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      padding: 0.6rem 0.9rem;
+      border-radius: 8px;
+    }
+
+    .ea-user {
+      background: rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.6);
+      align-self: flex-end;
+    }
+
+    .ea-agent {
+      background: rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.85);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .ea-scores {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .ea-row {
+      display: grid;
+      grid-template-columns: 160px 1fr 52px;
+      align-items: center;
+      gap: 0.75rem;
+      animation: slideIn 0.4s ease both;
+      animation-delay: var(--delay);
+    }
+
+    .ea-criterion {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      font-weight: 500;
+    }
+
+    .ea-bar-track {
+      height: 6px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .ea-bar-fill {
+      height: 100%;
+      width: var(--w);
+      background: var(--color);
+      border-radius: 3px;
+      animation: scoreReveal 0.8s ease both;
+      animation-delay: var(--delay);
+    }
+
+    .ea-score {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .ea-pass { color: #7ecb8f; }
+    .ea-warn { color: #f0c040; }
+
+    .ea-recommendation {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-left: 3px solid #f0c040;
+      border-radius: 4px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      animation: slideIn 0.4s ease 1.7s both;
+    }
+
+    .ea-rec-label {
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .ea-rec-text {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+
+    .ea-severity {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      align-self: flex-start;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+    }
+
+    .ea-sev-med {
+      background: rgba(240,192,64,0.15);
+      color: #f0c040;
+    }
+  </style>
+
+</body>
+</html>

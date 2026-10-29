@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Ads AI Knowledge Framework — Sanjuna Sunil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="../index.html" class="nav-back">← Back to portfolio</a>
+    <span class="nav-title">Sanjuna Sunil</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-meta">
+        <span class="case-tag">RAG · Prompt Engineering</span>
+        <span class="case-tag">Portfolio Project</span>
+        <span class="case-year">2024</span>
+      </div>
+      <h1 class="case-title">Google Ads AI<br>Knowledge Framework</h1>
+      <p class="case-summary">An end-to-end AI knowledge strategy built on real Google Ads policy content — from knowledge architecture and intent taxonomy through system prompt engineering to LLM-as-a-Judge evaluation with four deployment-readiness verdicts.</p>
+    </div>
+
+    <div class="case-stats">
+      <div class="case-stat">
+        <span class="stat-num">6</span>
+        <span class="stat-label">Knowledge chunks</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">17</span>
+        <span class="stat-label">Metadata fields per chunk</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Intent categories</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">5</span>
+        <span class="stat-label">Evaluation dimensions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANIMATED VISUAL -->
+  <div class="case-visual">
+    <div class="visual-frame">
+      <div class="ads-animation">
+        <div class="ads-pipeline">
+
+          <div class="ads-stage" style="--delay:0s">
+            <div class="ads-stage-label">01 · Knowledge</div>
+            <div class="ads-stage-body">
+              <div class="ads-chunk">
+                <span class="ads-chunk-id">POL-001</span>
+                <span class="ads-chunk-title">Ad Suspension Policy</span>
+                <span class="ads-chunk-meta">intent: appeal · freshness: 90d</span>
+              </div>
+              <div class="ads-chunk" style="opacity:0.6">
+                <span class="ads-chunk-id">POL-002</span>
+                <span class="ads-chunk-title">Billing &amp; Payments</span>
+                <span class="ads-chunk-meta">intent: billing · freshness: 30d</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ads-arrow">→</div>
+
+          <div class="ads-stage" style="--delay:0.4s">
+            <div class="ads-stage-label">02 · Intent</div>
+            <div class="ads-stage-body">
+              <div class="ads-intent-row">
+                <span class="ads-intent-name">Account suspension</span>
+                <span class="ads-intent-conf">0.94</span>
+              </div>
+              <div class="ads-intent-row" style="opacity:0.5">
+                <span class="ads-intent-name">Policy clarification</span>
+                <span class="ads-intent-conf">0.04</span>
+              </div>
+              <div class="ads-intent-row" style="opacity:0.25">
+                <span class="ads-intent-name">Billing query</span>
+                <span class="ads-intent-conf">0.02</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ads-arrow">→</div>
+
+          <div class="ads-stage" style="--delay:0.8s">
+            <div class="ads-stage-label">03 · Evaluation</div>
+            <div class="ads-stage-body">
+              <div class="ads-eval-row">
+                <span class="ads-eval-dim">Grounding</span>
+                <span class="ads-eval-score ads-green">✓ 5/5</span>
+              </div>
+              <div class="ads-eval-row">
+                <span class="ads-eval-dim">Relevance</span>
+                <span class="ads-eval-score ads-green">✓ 4/5</span>
+              </div>
+              <div class="ads-eval-row">
+                <span class="ads-eval-dim">Escalation</span>
+                <span class="ads-eval-score ads-green">✓ 5/5</span>
+              </div>
+              <div class="ads-verdict">Deploy-ready ✓</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="case-body">
+
+    <div class="case-section">
+      <span class="cs-label">The Problem</span>
+      <h2 class="cs-heading">AI responses are only as good as the knowledge behind them</h2>
+      <div class="cs-body">
+        <p>Most AI chatbot projects focus heavily on the model and the prompt — but the knowledge layer is where responses actually succeed or fail. Unstructured knowledge produces vague, ungrounded responses. Without an intent taxonomy, routing rules can't work. Without evaluation criteria, you can't know when the system is ready to deploy.</p>
+        <p>This project was built as a <strong>full-stack demonstration</strong> of what production-ready AI knowledge strategy looks like — using real Google Ads policy content as the domain. The goal was to show all four layers working together: structured knowledge, intent classification, system prompt engineering, and rigorous LLM evaluation.</p>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Process</span>
+      <h2 class="cs-heading">Four layers, built in sequence</h2>
+      <ul class="cs-list">
+        <li><strong>Knowledge architecture:</strong> Structured Google Ads policy content into 6 retrieval-ready knowledge chunks. Each chunk carries 17 metadata fields including policy identifier, trigger conditions, intent routing, applicable audience, tone guidance, and a freshness date with a 90-day expiry gate for policy citations.</li>
+        <li><strong>Intent taxonomy:</strong> Designed an 8-intent classification system covering account suspension, billing queries, policy clarification, campaign setup, appeal guidance, escalation requests, general FAQs, and out-of-scope queries. Each intent has a confidence threshold, response-routing rule, and fallback handling for low-confidence classifications.</li>
+        <li><strong>System prompt engineering:</strong> Built a versioned system prompt with behavioral constraints (no speculation on policy outcomes, no legal advice), escalation triggers (account flagged for legal review), freshness gates (refuse to cite policies older than 90 days), and tone rules per intent category.</li>
+        <li><strong>Simulated hallucination &amp; fix:</strong> Introduced a deliberate hallucination scenario — a response citing an outdated policy — and documented the fix: adding the 90-day freshness gate to the system prompt and the metadata freshness field to the knowledge chunks.</li>
+        <li><strong>LLM-as-a-Judge evaluation:</strong> Built and deployed an evaluation tool using Gemini to score AI responses across five dimensions: grounding, relevance, format compliance, escalation accuracy, and tone. Outputs a four-verdict deployment readiness rating: Deploy-ready, Needs minor fixes, Needs major revision, Do not deploy.</li>
+      </ul>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Outcome</span>
+      <h2 class="cs-heading">A deployable, evaluated AI knowledge system</h2>
+      <div class="outcome-box">
+        <div class="outcome-row">
+          <span class="outcome-num">Live</span>
+          <span class="outcome-text">Evaluation tool deployed at <a href="https://ads-evaluator.web.app" target="_blank" style="color:#7ecb8f;">ads-evaluator.web.app</a> — fully functional LLM-as-a-Judge interface for scoring Google Ads AI responses.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">4-layer</span>
+          <span class="outcome-text">Complete knowledge strategy covering architecture, intent, prompting, and evaluation — demonstrating the full production-readiness workflow from raw policy content to scored AI responses.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">GitHub</span>
+          <span class="outcome-text">Full project on <a href="https://github.com/SanjunaSunil/google-ads-ai-knowledge-strategist-project" target="_blank" style="color:#7ecb8f;">GitHub</a> including knowledge chunks, intent taxonomy, versioned system prompt, and evaluation rubric.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="case-footer">
+    <span class="footer-copy">© 2026 Sanjuna Sunil</span>
+    <nav class="footer-nav">
+      <a href="case-reduction.html">← Previous project</a>
+      <a href="ai-content-workflows.html">Next project →</a>
+    </nav>
+  </footer>
+
+  <style>
+    .ads-animation {
+      background: #1a1033;
+      padding: 2rem 2.5rem;
+    }
+
+    .ads-pipeline {
+      display: grid;
+      grid-template-columns: 1fr 28px 1fr 28px 1fr;
+      align-items: start;
+      gap: 0.5rem;
+    }
+
+    .ads-arrow {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.2);
+      text-align: center;
+      padding-top: 2.5rem;
+    }
+
+    .ads-stage {
+      animation: slideIn 0.4s ease both;
+      animation-delay: var(--delay);
+    }
+
+    .ads-stage-label {
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 0.75rem;
+    }
+
+    .ads-stage-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .ads-chunk {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 0.6rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .ads-chunk-id {
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .ads-chunk-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .ads-chunk-meta {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.35);
+      font-family: monospace;
+    }
+
+    .ads-intent-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.78rem;
+    }
+
+    .ads-intent-name { color: rgba(255,255,255,0.65); }
+    .ads-intent-conf { color: rgba(255,255,255,0.85); font-weight: 700; font-family: monospace; }
+
+    .ads-eval-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.78rem;
+    }
+
+    .ads-eval-dim { color: rgba(255,255,255,0.55); }
+    .ads-eval-score { font-weight: 700; }
+    .ads-green { color: #7ecb8f; }
+
+    .ads-verdict {
+      margin-top: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #7ecb8f;
+      background: rgba(126,203,143,0.1);
+      border: 1px solid rgba(126,203,143,0.25);
+      border-radius: 3px;
+      padding: 0.35rem 0.6rem;
+      text-align: center;
+      animation: slideIn 0.3s ease 1.2s both;
+    }
+
+    @media (max-width: 680px) {
+      .ads-pipeline { grid-template-columns: 1fr; }
+      .ads-arrow { transform: rotate(90deg); padding-top: 0; text-align: center; }
+    }
+  </style>
+
+</body>
+</html>

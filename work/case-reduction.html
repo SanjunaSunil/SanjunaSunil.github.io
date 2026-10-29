@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Case Analysis & Self-Service Redesign — Sanjuna Sunil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="../index.html" class="nav-back">← Back to portfolio</a>
+    <span class="nav-title">Sanjuna Sunil</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-meta">
+        <span class="case-tag">Content Strategy</span>
+        <span class="case-tag">SAP Labs India</span>
+        <span class="case-year">2025</span>
+      </div>
+      <h1 class="case-title">Customer Case Analysis<br>&amp; Self-Service Redesign</h1>
+      <p class="case-summary">Analysed 500 customer support cases to surface the real gaps in help content, then redesigned documentation as task-oriented guidance and interactive flowcharts — contributing to a 10% reduction in support cases after the October 2025 release.</p>
+    </div>
+
+    <div class="case-stats">
+      <div class="case-stat">
+        <span class="stat-num">500</span>
+        <span class="stat-label">Support cases analysed</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">10%</span>
+        <span class="stat-label">Reduction in support cases</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Months post-release</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">Oct 25</span>
+        <span class="stat-label">Release date</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTIFACT: REAL PUBLISHED WORK -->
+  <div class="case-visual">
+    <div class="artifact-wrapper">
+      <div class="artifact-label-row">
+        <span class="artifact-badge">Published on SAP Help Portal</span>
+        <a href="https://help.sap.com/docs/successfactors-platform/story-reports/story-reports" target="_blank" class="artifact-link">View live ↗</a>
+      </div>
+      <div class="artifact-caption">Story Reports — Interactive content hub</div>
+      <div class="visual-frame">
+        <img src="../assets/story-reports-interactive.gif"
+             alt="Animated GIF showing the Story Reports interactive content hub on SAP Help Portal — grouped topic tiles organised by Enablement, Admin Configuration, and Query Design, each linking to task-oriented help topics"
+             class="artifact-gif" />
+      </div>
+      <div class="artifact-annotations">
+        <div class="annotation">
+          <span class="ann-num">1</span>
+          <div class="ann-text">
+            <strong>Content profiling &amp; reuse</strong>
+            SAP Analytics Cloud content was profiled and conditionally filtered to surface only the SuccessFactors-relevant topics — avoiding duplication while maintaining a single source of truth in DITA/CCMS.
+          </div>
+        </div>
+        <div class="annotation">
+          <span class="ann-num">2</span>
+          <div class="ann-text">
+            <strong>Task-oriented information architecture</strong>
+            Topics are grouped by user role and workflow stage (Enablement → Admin Configuration → Query Design) rather than feature-first — so users find what they need by what they're trying to do.
+          </div>
+        </div>
+        <div class="annotation">
+          <span class="ann-num">3</span>
+          <div class="ann-text">
+            <strong>Interactive tile navigation</strong>
+            Each tile links directly to a scoped help topic. This pattern reduces scroll fatigue on long guides and was part of the redesign that contributed to the 10% support-case reduction.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="case-body">
+
+    <div class="case-section">
+      <span class="cs-label">The Problem</span>
+      <h2 class="cs-heading">Customers kept hitting the same walls</h2>
+      <div class="cs-body">
+        <p>SAP SuccessFactors Report Center was generating a steady stream of support cases. The existing help documentation was largely <strong>conceptual and reference-oriented</strong> — it explained what Report Center was, but didn't walk users through the tasks that were actually causing them problems.</p>
+        <p>Customers contacting support were often stuck on the same small set of issues: permission errors, missing data, report configuration steps that weren't documented end-to-end. Each case took time from support agents and frustrated users who expected to find answers in the help content.</p>
+        <p>Without analysing the cases, it was impossible to know which documentation gaps were driving the most volume — and without that, any content updates were guesswork.</p>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Process</span>
+      <h2 class="cs-heading">Research first, then targeted redesign</h2>
+      <ul class="cs-list">
+        <li><strong>Case analysis:</strong> Reviewed 500 customer support cases filed against Report Center in Jira. Coded each case by error type, the task the user was trying to complete, and the documentation state at the time (existed but incomplete, entirely missing, or present but conceptual only).</li>
+        <li><strong>Pattern identification:</strong> Grouped cases into four recurring failure patterns: missing task steps, no troubleshooting path, outdated screenshots, and concept-only content with no procedures. Together these accounted for the vast majority of case volume.</li>
+        <li><strong>Content redesign:</strong> Rewrote the highest-impact topics as <strong>task-oriented procedures</strong> — numbered steps, specific field names, and expected outcomes at each step. Added prerequisite sections to surface permission and configuration requirements before users started a task.</li>
+        <li><strong>Interactive flowcharts:</strong> For the most complex troubleshooting scenarios (permission errors, data access issues), built decision-tree flowcharts in Lucidchart and embedded them in the help content — giving users a visual path to resolution without calling support.</li>
+        <li><strong>DITA and CCMS:</strong> Authored all new content in DITA using IxiaSoft CCMS, structured for reuse across the Report Center and related reporting topics.</li>
+      </ul>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Outcome</span>
+      <h2 class="cs-heading">Fewer support calls, better self-service</h2>
+      <div class="outcome-box">
+        <div class="outcome-row">
+          <span class="outcome-num">10%</span>
+          <span class="outcome-text">Reduction in customer support cases associated with Report Center in the three months following the October 2025 release — users resolving issues through help content instead of contacting support.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">500</span>
+          <span class="outcome-text">Support cases systematically coded and analysed to identify root causes — turning anecdotal feedback into a structured content gap analysis.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">Task-first</span>
+          <span class="outcome-text">Shifted documentation from concept-heavy reference content to task-oriented procedures and troubleshooting flowcharts aligned to real user failure points.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="case-footer">
+    <span class="footer-copy">© 2026 Sanjuna Sunil</span>
+    <nav class="footer-nav">
+      <a href="joule-eval.html">← Previous project</a>
+      <a href="google-ads.html">Next project →</a>
+    </nav>
+  </footer>
+
+  <style>
+    /* ── Artifact section ── */
+    .artifact-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 0;
+    }
+
+    .artifact-label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .artifact-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--banner-fg);
+      background: var(--banner-bg);
+      padding: 0.25rem 0.65rem;
+      border-radius: 3px;
+      opacity: 0.85;
+    }
+
+    .artifact-link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+
+    .artifact-link:hover { color: var(--ink); }
+
+    .artifact-caption {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .artifact-gif {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+    }
+
+    /* ── Numbered annotations ── */
+    .artifact-annotations {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .annotation {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+
+    .ann-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--ink);
+      opacity: 0.15;
+      line-height: 1;
+      padding-top: 0.1rem;
+    }
+
+    .ann-text {
+      font-size: 0.875rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+    }
+
+    .ann-text strong {
+      display: block;
+      color: var(--ink);
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 680px) {
+      .artifact-wrapper { padding: 2rem 1.25rem 0; }
+    }
+  </style>
+
+</body>
+</html>

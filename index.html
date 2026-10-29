@@ -1,216 +1,483 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="pink">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanjuna Sunil – AI &amp; Knowledge Strategist</title>
+  <title>Sanjuna Sunil — Senior Technical Writer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <h1>Sanjuna Sunil</h1>
-      <p class="tagline">User Assistance Developer &nbsp;·&nbsp; Content Designer &nbsp;·&nbsp; AI &amp; Knowledge Strategist</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <!-- ── NAV ── -->
+  <nav class="topnav">
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
-  </header>
+    <div class="theme-switcher">
+      <span class="switch-label">SWITCH THEME</span>
+      <button class="theme-dot active" data-theme="pink" aria-label="Pink theme"></button>
+      <button class="theme-dot" data-theme="sand" aria-label="Sand theme"></button>
+      <button class="theme-dot" data-theme="mint" aria-label="Mint theme"></button>
+    </div>
+  </nav>
 
-  <main>
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-name-block">
+      <div class="hero-meta">
+        <span class="hero-estd">Estd. 2015</span>
+        <span class="hero-version">portfolio v1.0</span>
+        <p class="hero-blurb">Senior Technical Writer with 11 years of experience in enterprise SaaS, AI documentation, and knowledge systems. Currently at SAP Labs India.</p>
+      </div>
+      <div class="hero-illustration" aria-hidden="true">
+        <!-- SVG illustration: docs/writing themed icons -->
+        <svg viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+          <!-- Document stack -->
+          <rect x="20" y="30" width="80" height="100" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <line x1="32" y1="52" x2="88" y2="52" stroke="currentColor" stroke-width="2"/>
+          <line x1="32" y1="64" x2="88" y2="64" stroke="currentColor" stroke-width="2"/>
+          <line x1="32" y1="76" x2="72" y2="76" stroke="currentColor" stroke-width="2"/>
+          <line x1="32" y1="88" x2="80" y2="88" stroke="currentColor" stroke-width="2"/>
+          <line x1="32" y1="100" x2="60" y2="100" stroke="currentColor" stroke-width="2"/>
+          <!-- Cursor / pointer -->
+          <path d="M130 20 L130 60 L142 50 L148 68 L154 66 L148 48 L162 48 Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <!-- API / code block -->
+          <rect x="170" y="15" width="100" height="70" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <text x="180" y="38" font-family="monospace" font-size="9" fill="currentColor">GET /api/docs</text>
+          <text x="180" y="52" font-family="monospace" font-size="9" fill="currentColor">200 OK</text>
+          <text x="180" y="66" font-family="monospace" font-size="9" fill="currentColor">{ "status": ✓ }</text>
+          <!-- Brain / LLM -->
+          <ellipse cx="290" cy="55" rx="28" ry="24" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <path d="M278 48 Q290 40 302 48" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M274 58 Q290 68 306 58" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="290" y1="31" x2="290" y2="25" stroke="currentColor" stroke-width="2"/>
+          <circle cx="290" cy="23" r="3" fill="currentColor"/>
+          <!-- Arrow right -->
+          <line x1="300" y1="100" x2="326" y2="100" stroke="currentColor" stroke-width="2.5"/>
+          <polyline points="318,93 326,100 318,107" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <!-- Flowchart box -->
+          <rect x="20" y="158" width="70" height="36" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <text x="35" y="181" font-family="monospace" font-size="9" fill="currentColor">Task A</text>
+          <line x1="90" y1="176" x2="110" y2="176" stroke="currentColor" stroke-width="2"/>
+          <polyline points="104,170 110,176 104,182" stroke="currentColor" stroke-width="2" fill="none"/>
+          <rect x="110" y="158" width="70" height="36" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <text x="125" y="181" font-family="monospace" font-size="9" fill="currentColor">Task B</text>
+          <!-- Evaluation / checklist -->
+          <rect x="200" y="140" width="90" height="110" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <text x="212" y="162" font-size="9" fill="currentColor" font-family="monospace">Eval Criteria</text>
+          <line x1="210" y1="170" x2="280" y2="170" stroke="currentColor" stroke-width="1"/>
+          <text x="212" y="186" font-size="8.5" fill="currentColor">✓ Grounding</text>
+          <text x="212" y="200" font-size="8.5" fill="currentColor">✓ Tone</text>
+          <text x="212" y="214" font-size="8.5" fill="currentColor">✓ Relevance</text>
+          <text x="212" y="228" font-size="8.5" fill="currentColor">✓ Format</text>
+          <!-- Sparkle / star -->
+          <line x1="160" y1="120" x2="160" y2="108" stroke="currentColor" stroke-width="2"/>
+          <line x1="160" y1="132" x2="160" y2="144" stroke="currentColor" stroke-width="2"/>
+          <line x1="154" y1="126" x2="142" y2="126" stroke="currentColor" stroke-width="2"/>
+          <line x1="166" y1="126" x2="178" y2="126" stroke="currentColor" stroke-width="2"/>
+          <line x1="156" y1="122" x2="148" y2="114" stroke="currentColor" stroke-width="2"/>
+          <line x1="164" y1="130" x2="172" y2="138" stroke="currentColor" stroke-width="2"/>
+          <!-- Number badge -->
+          <rect x="115" y="210" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <text x="126" y="229" font-size="12" font-weight="bold" fill="currentColor">24</text>
+          <!-- Down arrow -->
+          <line x1="55" y1="212" x2="55" y2="238" stroke="currentColor" stroke-width="2.5"/>
+          <polyline points="48,232 55,240 62,232" stroke="currentColor" stroke-width="2.5" fill="none"/>
+        </svg>
+      </div>
+    </div>
 
-    <!-- ABOUT -->
-    <section id="about" class="container">
-      <h2>About Me</h2>
-      <p>
-        User Assistance Developer and content strategist with <strong>11+ years of experience</strong> in enterprise software documentation, knowledge management, customer problem analysis, and cross-functional content delivery. Currently at <strong>SAP Labs India</strong>.
-      </p>
-      <p>
-        At SAP, developed an AI agent evaluation tool to assess conversational responses against quality guidelines and identify opportunities to improve response accuracy and consistency. Analyzed 500 customer error cases and developed interactive troubleshooting guidance associated with a <strong>10% reduction in customer support cases</strong>.
-      </p>
-      <div class="highlights">
-        <div class="highlight-card">
-          <span class="stat">11+</span>
-          <span class="label">Years of experience</span>
+    <h1 class="hero-name">
+      <span class="name-line">Sanjuna</span>
+      <span class="name-line">Sunil</span>
+    </h1>
+
+    <div class="hero-divider"></div>
+
+    <div class="hero-tagline-row">
+      <h2 class="hero-title">Senior Technical Writer,<br>SAP Labs India</h2>
+      <p class="hero-desc">11 years planning, writing, and maintaining user-focused documentation for enterprise software — authored in DITA, managed in IxiaSoft CCMS, and delivered across multiple release cycles each year. Increasingly applying AI to the work itself: prompt engineering, agent conversation evaluation, and AI-assisted content workflows.</p>
+    </div>
+
+    <div class="hero-facts">
+      <div class="fact-item">
+        <span>11 years in enterprise SaaS</span>
+      </div>
+      <div class="fact-item">
+        <span>DITA · IxiaSoft CCMS · Markdown</span>
+      </div>
+      <div class="fact-item">
+        <span>Based in Bengaluru, India</span>
+      </div>
+      <div class="fact-item">
+        <span>6 release cycles coordinated/year</span>
+      </div>
+      <div class="fact-item">
+        <span>SAP · Blue Yonder · Cognizant</span>
+      </div>
+      <div class="fact-item">
+        <span>AI evaluation · Prompt engineering</span>
+      </div>
+    </div>
+
+    <div class="hero-companies">
+      <span class="co-name">SAP SuccessFactors</span>
+      <span class="co-sep">·</span>
+      <span class="co-name">SAP Analytics Cloud</span>
+      <span class="co-sep">·</span>
+      <span class="co-name">Blue Yonder</span>
+      <span class="co-sep">·</span>
+      <span class="co-name">Cognizant</span>
+    </div>
+  </section>
+
+  <!-- ── WORK HEADER ── -->
+  <div class="section-banner" id="work">
+    <h2>Work</h2>
+  </div>
+
+  <!-- ── PUBLISHED GUIDES ── -->
+  <section class="published-section">
+    <p class="pub-eyebrow">Published on SAP Help Portal</p>
+    <div class="pub-grid">
+
+      <a class="pub-card" href="https://help.sap.com/docs/people-intelligence/people-intelligence/people-intelligence" target="_blank">
+        <div class="pub-card-top">
+          <span class="pub-product">SAP SuccessFactors</span>
+          <span class="pub-arrow">↗</span>
         </div>
-        <div class="highlight-card">
-          <span class="stat">500</span>
-          <span class="label">Customer error cases analyzed</span>
+        <h3 class="pub-title">People Intelligence</h3>
+        <p class="pub-desc">Embedded analytics and workforce insights for HR decision-making — pre-built stories and dashboards for HR admins and business partners.</p>
+        <div class="pub-rule"></div>
+        <span class="pub-tag">Analytics · HR Admins</span>
+      </a>
+
+      <a class="pub-card" href="https://help.sap.com/docs/successfactors-platform/story-reports/story-reports" target="_blank">
+        <div class="pub-card-top">
+          <span class="pub-product">SAP SuccessFactors</span>
+          <span class="pub-arrow">↗</span>
         </div>
-        <div class="highlight-card">
-          <span class="stat">10%</span>
-          <span class="label">Reduction in support cases</span>
+        <h3 class="pub-title">Story Reports</h3>
+        <p class="pub-desc">Interactive canvas-based reports built with SAP Analytics Cloud tools embedded in SuccessFactors — covers creating, editing, and sharing story reports for HR data.</p>
+        <div class="pub-rule"></div>
+        <span class="pub-tag">Reporting · Power Users</span>
+      </a>
+
+      <a class="pub-card" href="https://help.sap.com/docs/successfactors-platform/report-center/overview-of-report-center" target="_blank">
+        <div class="pub-card-top">
+          <span class="pub-product">SAP SuccessFactors</span>
+          <span class="pub-arrow">↗</span>
+        </div>
+        <h3 class="pub-title">Report Center</h3>
+        <p class="pub-desc">The centralized hub for all SuccessFactors report types — covers the interface, permissions, navigation, scheduling, and running table reports, story reports, and tiles.</p>
+        <div class="pub-rule"></div>
+        <span class="pub-tag">Platform · Admins &amp; End Users</span>
+      </a>
+
+      <a class="pub-card" href="https://help.sap.com/docs/successfactors-platform/other-reports/table-reports" target="_blank">
+        <div class="pub-card-top">
+          <span class="pub-product">SAP SuccessFactors</span>
+          <span class="pub-arrow">↗</span>
+        </div>
+        <h3 class="pub-title">Table Reports</h3>
+        <p class="pub-desc">Column-based reporting across HR modules — covers creating, configuring, filtering, and exporting table reports including cross-module joins and distribution.</p>
+        <div class="pub-rule"></div>
+        <span class="pub-tag">Reporting · Admins</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── WORK CARDS ── -->
+  <section class="work-grid">
+
+    <article class="work-card" onclick="location.href='work/joule-eval.html'" style="cursor:pointer">
+      <div class="work-img work-img--joule" aria-label="LLM Evaluation Tool illustration">
+        <div class="work-img-inner">
+          <div class="eval-mockup">
+            <div class="eval-bar"><span class="eval-label">Grounding</span><span class="eval-score eval-pass">✓ 4/5</span></div>
+            <div class="eval-bar"><span class="eval-label">Tone</span><span class="eval-score eval-pass">✓ 5/5</span></div>
+            <div class="eval-bar"><span class="eval-label">Relevance</span><span class="eval-score eval-warn">⚠ 3/5</span></div>
+            <div class="eval-bar"><span class="eval-label">Format</span><span class="eval-score eval-pass">✓ 4/5</span></div>
+            <div class="eval-bar"><span class="eval-label">Escalation</span><span class="eval-score eval-pass">✓ 5/5</span></div>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="container alt-bg">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>AI Evaluation &amp; Prompt Engineering</h3>
-          <ul>
-            <li>LLM-as-a-Judge</li>
-            <li>AI Response Grounding</li>
-            <li>Prompt Engineering</li>
-            <li>AI Quality Guidelines</li>
-            <li>Agent Evaluation</li>
-            <li>Claude Code · SAP AI Core</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Knowledge &amp; Content Strategy</h3>
-          <ul>
-            <li>Knowledge Management</li>
-            <li>Information Architecture</li>
-            <li>User Intent Mapping</li>
-            <li>Semantic Metadata Tagging</li>
-            <li>Enterprise Taxonomies</li>
-            <li>Content Governance</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Developer Documentation</h3>
-          <ul>
-            <li>REST API Documentation</li>
-            <li>OpenAPI / Swagger</li>
-            <li>GitHub &amp; Markdown</li>
-            <li>VS Code · Postman</li>
-            <li>Developer Portals</li>
-            <li>DITA &amp; Madcap Flare CCMS</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Tools &amp; Collaboration</h3>
-          <ul>
-            <li>Jira · Confluence · Figma</li>
-            <li>SAP SuccessFactors</li>
-            <li>SAP Analytics Cloud</li>
-            <li>Lucid Chart · Camtasia</li>
-            <li>Cross-Functional Stakeholder Management</li>
-            <li>Release Planning</li>
-          </ul>
-        </div>
+      <div class="work-card-body">
+        <p class="work-tags">#AI-EVALUATION · SAP · 2024</p>
+        <h3 class="work-title"><a href="work/joule-eval.html">LLM-as-a-Judge: Joule Evaluation Tool <span class="arrow">→</span></a></h3>
+        <div class="work-rule"></div>
+        <p class="work-desc">Built an AI evaluation platform to assess SAP Joule agent responses against 24 quality guidelines — surfacing evidence, severity, and improvement recommendations. Halved evaluation time from 2+ hours to ~1 hour.</p>
       </div>
-    </section>
+    </article>
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="container">
-      <h2>Portfolio Projects</h2>
-      <p class="section-intro">End-to-end projects demonstrating AI knowledge strategy, prompt engineering, and content governance.</p>
-      <div class="project-grid">
-        <div class="project-card featured">
-          <div class="featured-badge">Featured</div>
-          <h3>Google Ads AI Response Evaluation and Guardrails</h3>
-          <p>A complete AI knowledge strategy project built on real Google Ads policy content. Covers all four layers of production AI readiness:</p>
-          <ul class="project-bullets">
-            <li><strong>Knowledge Architecture:</strong> Structured Google Ads policy content into 6 retrieval-ready knowledge chunks with 17 metadata fields, enabling intent-aware retrieval using policy identifiers, trigger conditions, and freshness metadata.</li>
-            <li><strong>Intent Classification:</strong> Designed an 8-intent taxonomy with confidence thresholds, response-routing rules, tone guidance, and fallback handling for unclassified queries.</li>
-            <li><strong>Prompt Engineering &amp; Grounding:</strong> Developed a versioned system prompt with behavioral constraints and escalation triggers; addressed a simulated hallucination scenario by introducing a 90-day freshness gate for policy citations.</li>
-            <li><strong>AI Evaluation:</strong> Built and deployed an LLM-as-a-Judge evaluation tool using Gemini to score AI responses across five dimensions: grounding, relevance, format compliance, escalation accuracy, and tone, with four deployment-readiness verdicts.</li>
-          </ul>
-          <div class="tags">
-            <span>RAG</span><span>Prompt Engineering</span><span>LLM Evaluation</span><span>Gemini</span><span>Google Cloud</span><span>React</span>
-          </div>
-          <div class="project-links">
-            <a href="https://ads-evaluator.web.app" class="btn" target="_blank">Live Demo</a>
-            <a href="https://github.com/SanjunaSunil/google-ads-ai-knowledge-strategist-project" class="btn btn-outline" target="_blank">View on GitHub</a>
+    <article class="work-card" onclick="location.href='work/google-ads.html'" style="cursor:pointer">
+      <div class="work-img work-img--ads" aria-label="Google Ads AI project illustration">
+        <div class="work-img-inner">
+          <div class="ads-mockup">
+            <div class="ads-header">Google Ads AI</div>
+            <div class="ads-row"><span class="ads-tag">Policy</span><span class="ads-val">Suspension</span></div>
+            <div class="ads-row"><span class="ads-tag">Intent</span><span class="ads-val">Appeal guidance</span></div>
+            <div class="ads-row"><span class="ads-tag">Verdict</span><span class="ads-val ads-green">Deploy-ready ✓</span></div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="container alt-bg">
-      <h2>Experience</h2>
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="company">SAP Labs India</span>
-            <span class="period">Nov 2019 – Present</span>
-          </div>
-          <h3>User Assistance Developer</h3>
-          <ul>
-            <li><strong>AI agent evaluation:</strong> Developed an LLM-as-a-Judge tool to assess Joule conversations against 24 SAP quality guidelines, identify response-level issues, and recommend improvements; reduced evaluation turnaround from over 2 hours to approximately 1 hour.</li>
-            <li><strong>Evaluation at scale:</strong> Built a browser extension to capture and structure Joule test conversations, supporting evaluations across 50 conversation scenarios spanning 10 AI agents.</li>
-            <li><strong>Customer insights and content strategy:</strong> Analyzed 500 customer error cases to identify recurring user problems and created interactive, flowchart-based troubleshooting guidance, contributing to a 10% reduction in customer support cases following the October 2025 release.</li>
-            <li><strong>AI response quality:</strong> Translated quality guidelines into structured evaluation criteria and actionable recommendations to improve response consistency and adherence to user assistance standards.</li>
-            <li><strong>Prompt and content governance:</strong> Developed reusable prompt and generative content templates to improve consistency and reduce formatting drift.</li>
-            <li><strong>Cross-functional delivery:</strong> Coordinated documentation and release readiness across six product release cycles, two for SuccessFactors and four for Analytics Cloud, working with product, engineering, and governance stakeholders.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="company">Blue Yonder (formerly JDA Software)</span>
-            <span class="period">May 2017 – Nov 2019</span>
-          </div>
-          <h3>Instructional Designer</h3>
-          <ul>
-            <li>Developed technical tutorials and developer enablement content for the Blue Yonder Developer Portal, translating complex supply chain workflows and system integrations into clear, task-oriented learning resources.</li>
-            <li>Structured product and technical information into role-based learning paths, helping users understand system configurations, integration workflows, and key implementation concepts.</li>
-            <li>Partnered with subject-matter experts and product leads to translate technical concepts and customer workflows into accurate, user-focused learning content aligned with product objectives.</li>
-            <li>Created e-learning and instructor-led training curricula for supply chain products, adapting complex information to different learning needs and user contexts.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="company">Cognizant</span>
-            <span class="period">Sep 2015 – May 2017</span>
-          </div>
-          <h3>Technical Writer</h3>
-          <ul>
-            <li>Supported 25+ enterprise presales Request for Proposals (RFPs) by preparing, clarifying, and auditing complex technical content to effectively communicate product solutions to prospective clients.</li>
-            <li>Translated high-level engineering mechanics and business workflows into accessible, user-centric process documentation by collaborating directly with software developers and system analysts.</li>
-          </ul>
-        </div>
-
+      <div class="work-card-body">
+        <p class="work-tags">#RAG · #PROMPT-ENGINEERING · 2024</p>
+        <h3 class="work-title"><a href="work/google-ads.html">Google Ads AI Knowledge Framework <span class="arrow">→</span></a></h3>
+        <div class="work-rule"></div>
+        <p class="work-desc">End-to-end AI knowledge strategy: 6 retrieval-ready knowledge chunks, 8-intent taxonomy, versioned system prompt, and LLM-as-a-Judge evaluation scoring responses across 5 dimensions.</p>
       </div>
-    </section>
+    </article>
 
-    <!-- EDUCATION & CERTIFICATIONS -->
-    <section id="education" class="container">
-      <h2>Education &amp; Certifications</h2>
-      <div class="edu-grid">
-        <div class="edu-item">
-          <h3>Bharathiyar University, Coimbatore, India</h3>
-          <p>Bachelor's Degree in English Literature</p>
-        </div>
-        <div class="edu-item">
-          <h3>Certifications</h3>
-          <ul>
-            <li>Google Ads Certification</li>
-            <li>Google Prompt Essentials Certification</li>
-          </ul>
+    <article class="work-card" onclick="location.href='work/case-reduction.html'" style="cursor:pointer">
+      <div class="work-img work-img--cases" aria-label="Customer case analysis illustration">
+        <div class="work-img-inner">
+          <div class="cases-mockup">
+            <div class="cases-stat"><span class="cases-num">500</span><span class="cases-lbl">cases analysed</span></div>
+            <div class="cases-arrow">↓</div>
+            <div class="cases-stat cases-stat--result"><span class="cases-num cases-num--sm">10%</span><span class="cases-lbl">fewer support tickets</span></div>
+          </div>
         </div>
       </div>
-    </section>
+      <div class="work-card-body">
+        <p class="work-tags">#CONTENT-STRATEGY · SAP · 2025</p>
+        <h3 class="work-title"><a href="work/case-reduction.html">Customer Case Analysis &amp; Self-Service Redesign <span class="arrow">→</span></a></h3>
+        <div class="work-rule"></div>
+        <p class="work-desc">Analysed 500 customer support cases to find recurring error patterns and redesigned help content as task-oriented guidance and flowcharts — contributing to a 10% reduction in support cases after the Oct 2025 release.</p>
+      </div>
+    </article>
 
-    <!-- CONTACT -->
-    <section id="contact" class="container alt-bg">
-      <h2>Contact</h2>
-      <p>Open to AI strategy and knowledge strategy roles — prompt engineering, LLM evaluation, content governance, and knowledge architecture for AI products.</p>
+    <article class="work-card" onclick="location.href='work/ai-content-workflows.html'" style="cursor:pointer">
+      <div class="work-img work-img--prompt" aria-label="AI-assisted content workflows illustration">
+        <div class="work-img-inner">
+          <div class="prompt-mockup">
+            <div class="prompt-line"><span class="prompt-label">SYSTEM</span></div>
+            <div class="prompt-text">You are a release note writer. Given a Jira ticket, produce a structured release note in the standard template...</div>
+            <div class="prompt-line prompt-line--out"><span class="prompt-label prompt-label--out">OUTPUT</span></div>
+            <div class="prompt-text prompt-text--out">**New feature:** Analytics dashboard now supports...</div>
+          </div>
+        </div>
+      </div>
+      <div class="work-card-body">
+        <p class="work-tags">#PROMPT-ENGINEERING · SAP · 2023–24</p>
+        <h3 class="work-title"><a href="work/ai-content-workflows.html">AI-Assisted Content Workflows <span class="arrow">→</span></a></h3>
+        <div class="work-rule"></div>
+        <p class="work-desc">Designed reusable prompt templates for alt-text generation and release note drafting from Jira data — adopted globally across SAP User Assistance teams.</p>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ── SKILLS BANNER ── -->
+  <div class="section-banner" id="skills">
+    <h2>Skills</h2>
+  </div>
+
+  <!-- ── SKILLS ── -->
+  <section class="skills-section">
+    <div class="skills-new">
+
+      <div class="skill-row">
+        <div class="skill-row-label">Structured authoring<br>&amp; content lifecycle</div>
+        <div class="skill-tags">
+          <span>DITA</span>
+          <span>IxiaSoft CCMS</span>
+          <span>Content profiling</span>
+          <span>Content reuse</span>
+          <span>Information architecture</span>
+          <span>Documentation planning</span>
+          <span>Content standards</span>
+          <span>Terminology alignment</span>
+          <span>Release readiness</span>
+          <span>GitHub</span>
+          <span>Markdown</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-row-label">AI in content<br>workflows</div>
+        <div class="skill-tags">
+          <span>Agent conversation evaluation</span>
+          <span>Prompt engineering</span>
+          <span>AI quality guidelines</span>
+          <span>AI-assisted release notes</span>
+          <span>AI-assisted alt text</span>
+          <span>Retrieval-ready knowledge chunks</span>
+          <span>Metadata design</span>
+          <span>RAG</span>
+          <span>Python</span>
+          <span>Claude Code</span>
+          <span>SAP AI Core</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-row-label">Technical &amp;<br>UX content</div>
+        <div class="skill-tags">
+          <span>Task-oriented help</span>
+          <span>Troubleshooting guidance</span>
+          <span>Interactive flowcharts</span>
+          <span>UI text review</span>
+          <span>Accessibility</span>
+          <span>REST API documentation</span>
+          <span>Postman testing</span>
+          <span>Developer portals</span>
+          <span>Tutorials &amp; code samples</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-row-label">Collaboration<br>&amp; leadership</div>
+        <div class="skill-tags">
+          <span>Cross-functional: Product · Engineering · UX · Support</span>
+          <span>Mentoring writers</span>
+          <span>AI training sessions</span>
+          <span>Workflow adoption</span>
+          <span>Jira · Confluence</span>
+          <span>Figma · Lucidchart</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE BANNER ── -->
+  <div class="section-banner" id="experience">
+    <h2>Experience</h2>
+  </div>
+
+  <!-- ── EXPERIENCE ── -->
+  <section class="exp-section">
+
+    <div class="exp-entry">
+      <div class="exp-aside">
+        <span class="exp-period">Nov 2019 – Present</span>
+        <span class="exp-company">SAP Labs India</span>
+        <span class="exp-role">User Assistance Developer</span>
+      </div>
+      <ul class="exp-list">
+        <li><strong>AI evaluation tool:</strong> Built an LLM-as-a-Judge platform assessing Joule responses against 24 SAP quality guidelines; cut evaluation time from 2+ hours to ~1 hour. Adopted by ~30 colleagues across User Assistance and UX.</li>
+        <li><strong>Browser extension:</strong> Developed a conversation-capture extension to feed structured test data into the pipeline — 120 conversations across 10 agents.</li>
+        <li><strong>Customer research:</strong> Analysed 500 support cases, redesigned task-oriented help and flowchart-based troubleshooting guidance; 10% support-case reduction after Oct 2025 release.</li>
+        <li><strong>AI content templates:</strong> Alt-text prompt and release-note workflow adopted globally across SAP User Assistance teams.</li>
+        <li><strong>Release planning:</strong> Coordinated docs across six release cycles (two SuccessFactors, four SAP Analytics Cloud).</li>
+      </ul>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-aside">
+        <span class="exp-period">May 2017 – Nov 2019</span>
+        <span class="exp-company">Blue Yonder</span>
+        <span class="exp-role">Instructional Designer</span>
+      </div>
+      <ul class="exp-list">
+        <li>Designed and built role-based learning paths and instructor-led training curricula for supply-chain software, translating complex product configurations and integration workflows into structured learning experiences for customer and developer audiences.</li>
+        <li>Developed the full content mix for the Blue Yonder Developer Portal — API documentation, tutorials, code samples, and e-learning — applying instructional design principles to technical subject matter.</li>
+        <li>Tested REST API requests and responses in Postman to validate behaviour before writing, ensuring accuracy at the source rather than relying on SME review alone.</li>
+        <li>Worked directly with product leads and subject-matter experts to ground content in real user workflows and business objectives, not just feature descriptions.</li>
+      </ul>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-aside">
+        <span class="exp-period">Sep 2015 – May 2017</span>
+        <span class="exp-company">Cognizant</span>
+        <span class="exp-role">Technical Writer</span>
+      </div>
+      <ul class="exp-list">
+        <li>Supported 25+ enterprise presales RFPs with technical content for client-facing proposals.</li>
+        <li>Translated engineering workflows into accessible process documentation with developers and analysts.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ── ABOUT BANNER ── -->
+  <div class="section-banner" id="about">
+    <h2>About</h2>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section class="about-section">
+    <div class="about-left">
+      <p>I'm a Senior Technical Writer at SAP Labs India. My core work is what it's always been: plan documentation, understand what users are trying to do, write content that helps them do it, and maintain that content across release cycles. I author in DITA using IxiaSoft CCMS, work with product management, engineering, and UX to get the content right, and coordinate documentation readiness across six releases a year — two major SuccessFactors releases and four quarterly SAP Analytics Cloud releases.</p>
+      <p>A big part of the writing work comes from customer problems. I analysed 500 support cases to find where the help content was failing, then redesigned those topics as task-oriented procedures and decision-tree flowcharts. That work is associated with a 10% reduction in support cases in the three months after the October 2025 release.</p>
+      <p>Over the past two years I've also applied AI to the writing work directly. I built a conversation evaluation tool that assesses Joule AI agent responses against 24 quality guidelines, cutting review time from over two hours to about one hour. I created an alt-text prompt now used globally across SAP User Assistance teams, and developed an AI-assisted release-note workflow. I also lead Claude Code training sessions for writing colleagues and mentor them on integrating AI into content workflows.</p>
+      <p>Before SAP, I wrote developer documentation at Blue Yonder — REST API guides, tutorials, and training content. I tested API requests in Postman before writing them up. At Cognizant, I supported enterprise presales RFPs.</p>
+    </div>
+    <div class="about-right">
+      <div class="about-fact">
+        <span class="af-label">Current role</span>
+        <span class="af-val">User Assistance Developer, SAP Labs India</span>
+      </div>
+      <div class="about-fact">
+        <span class="af-label">Authoring</span>
+        <span class="af-val">DITA · IxiaSoft CCMS · GitHub · Markdown</span>
+      </div>
+      <div class="about-fact">
+        <span class="af-label">Education</span>
+        <span class="af-val">B.A. English Literature, Bharathiyar University</span>
+      </div>
+      <div class="about-fact">
+        <span class="af-label">Certifications</span>
+        <span class="af-val">Google Prompt Essentials</span>
+      </div>
+      <div class="about-fact">
+        <span class="af-label">Location</span>
+        <span class="af-val">Bengaluru, India</span>
+      </div>
+      <div class="about-fact">
+        <span class="af-label">GitHub</span>
+        <span class="af-val"><a href="https://github.com/SanjunaSunil" target="_blank">github.com/SanjunaSunil ↗</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <h2 class="contact-heading">Let's work<br><em>together.</em></h2>
+      <p class="contact-sub">Senior Technical Writer with 11 years of enterprise SaaS experience. Open to roles in technical writing, content strategy, and AI-assisted documentation workflows. Based in Bengaluru.</p>
       <div class="contact-links">
-        <a href="mailto:sanjunasunil13@gmail.com" class="btn">sanjunasunil13@gmail.com</a>
-        <a href="https://github.com/SanjunaSunil" class="btn btn-outline" target="_blank">GitHub</a>
+        <a href="mailto:sanjunasunil13@gmail.com" class="contact-btn">sanjunasunil13@gmail.com</a>
+        <a href="https://github.com/SanjunaSunil" class="contact-btn contact-btn--ghost" target="_blank">GitHub ↗</a>
       </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Sanjuna Sunil</p>
     </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>© 2026 Sanjuna Sunil</span>
+    <span>Bengaluru, India</span>
   </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
+
+  <script>
+    // Theme switcher
+    const dots = document.querySelectorAll('.theme-dot');
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        document.documentElement.setAttribute('data-theme', dot.dataset.theme);
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      });
+    });
+
+    // Scroll-to-top button
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 
 </body>
 </html>

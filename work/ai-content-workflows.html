@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Assisted Content Workflows — Sanjuna Sunil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="../index.html" class="nav-back">← Back to portfolio</a>
+    <span class="nav-title">Sanjuna Sunil</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-meta">
+        <span class="case-tag">Prompt Engineering</span>
+        <span class="case-tag">SAP Labs India</span>
+        <span class="case-year">2023–2024</span>
+      </div>
+      <h1 class="case-title">AI-Assisted<br>Content Workflows</h1>
+      <p class="case-summary">Designed two reusable prompt templates — one for accessible alt-text generation, one for release note drafting from Jira data — that were adopted globally across SAP User Assistance teams.</p>
+    </div>
+
+    <div class="case-stats">
+      <div class="case-stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Prompt templates built</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">Global</span>
+        <span class="stat-label">Adoption across SAP UA</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">WCAG</span>
+        <span class="stat-label">Accessibility standard met</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">Jira</span>
+        <span class="stat-label">Source for release notes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANIMATED VISUAL -->
+  <div class="case-visual">
+    <div class="visual-frame">
+      <div class="workflow-animation">
+        <div class="wf-tabs">
+          <button class="wf-tab active" id="tab1" onclick="switchTab(1)">Alt-text workflow</button>
+          <button class="wf-tab" id="tab2" onclick="switchTab(2)">Release note workflow</button>
+        </div>
+
+        <!-- Tab 1: Alt-text -->
+        <div class="wf-panel" id="panel1">
+          <div class="wf-col">
+            <div class="wf-col-label">Input: Image</div>
+            <div class="wf-image-mock">
+              <div class="wf-img-placeholder">
+                <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="80">
+                  <rect width="80" height="60" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+                  <circle cx="25" cy="22" r="8" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none"/>
+                  <path d="M8 50 L25 32 L40 42 L55 28 L72 50 Z" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none"/>
+                </svg>
+                <span class="wf-img-caption">Report Center screenshot</span>
+              </div>
+            </div>
+          </div>
+          <div class="wf-col-arrow">→</div>
+          <div class="wf-col">
+            <div class="wf-col-label">Prompt</div>
+            <div class="wf-prompt-block">
+              <div class="wf-prompt-line"><span class="wf-role-line">Role: Expert technical writer specialising in accessible, concise alt text for software documentation.</span>
+
+Write a single sentence (max 25 words) in present tense that communicates the essential action, function, or message.
+
+Do not use: "image of," "screenshot showing," "displays," "shows," or similar intro phrases.
+
+Focus only on the core visual or functional detail needed to understand or proceed with a task.</div>
+            </div>
+          </div>
+          <div class="wf-col-arrow">→</div>
+          <div class="wf-col">
+            <div class="wf-col-label">Output: Alt text</div>
+            <div class="wf-output-block">
+              <div class="wf-output-text wf-typing" id="altOutput">Pop-up dialog asks to confirm deletion of the selected story report with Cancel and Delete buttons.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Release note -->
+        <div class="wf-panel wf-panel--hidden" id="panel2">
+          <div class="wf-col">
+            <div class="wf-col-label">Input: Jira ticket</div>
+            <div class="wf-jira-block">
+              <div class="wf-jira-row"><span class="wf-jira-key">SF-48201</span></div>
+              <div class="wf-jira-row"><span class="wf-jira-label">Summary</span><span class="wf-jira-val">Add export to XLSX option in Report Center</span></div>
+              <div class="wf-jira-row"><span class="wf-jira-label">Type</span><span class="wf-jira-val">Enhancement</span></div>
+              <div class="wf-jira-row"><span class="wf-jira-label">Affects</span><span class="wf-jira-val">Report Center · All customers</span></div>
+            </div>
+          </div>
+          <div class="wf-col-arrow">→</div>
+          <div class="wf-col">
+            <div class="wf-col-label">Prompt</div>
+            <div class="wf-prompt-block">
+              <div class="wf-prompt-line">Write a release note using the standard SAP UA template. Use the Jira data provided. Tone: factual, customer-facing. Format: one-sentence what's new, one-sentence benefit, one-sentence how to access.</div>
+            </div>
+          </div>
+          <div class="wf-col-arrow">→</div>
+          <div class="wf-col">
+            <div class="wf-col-label">Output: Release note</div>
+            <div class="wf-output-block">
+              <div class="wf-output-text"><strong>Export Reports to XLSX</strong><br><br>You can now export reports from Report Center directly to Microsoft Excel format (.xlsx). This makes it easier to work with report data in external tools. To export, open any report and choose Export &gt; Excel.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- OUTCOME ARTIFACT -->
+  <div class="outcome-artifact">
+    <div class="oa-inner">
+      <div class="oa-label-row">
+        <span class="oa-badge">Prompt output — live in Claude</span>
+        <span class="oa-note">Input: UI screenshot with highlighted element &nbsp;→&nbsp; Output: compliant alt text</span>
+      </div>
+      <div class="oa-frame">
+        <img src="../assets/alttext-outcome.png"
+             alt="Claude interface with a UI screenshot as input on the left and the generated alt text on the right: Export Settings option highlighted in a dropdown menu beneath the Export option."
+             class="oa-img" />
+      </div>
+      <div class="oa-breakdown">
+        <div class="oa-point oa-point--pass">
+          <span class="oa-icon">✓</span>
+          <span><strong>No banned phrases</strong> — no "shows", "displays", "screenshot of", or "image of"</span>
+        </div>
+        <div class="oa-point oa-point--pass">
+          <span class="oa-icon">✓</span>
+          <span><strong>Present tense</strong> — "highlighted in a dropdown menu" not "was highlighted"</span>
+        </div>
+        <div class="oa-point oa-point--pass">
+          <span class="oa-icon">✓</span>
+          <span><strong>Under 25 words</strong> — 11 words, functionally complete</span>
+        </div>
+        <div class="oa-point oa-point--pass">
+          <span class="oa-icon">✓</span>
+          <span><strong>Functional focus</strong> — describes the user action (selecting Export Settings) not the visual layout</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="case-body">
+
+    <div class="case-section">
+      <span class="cs-label">The Problem</span>
+      <h2 class="cs-heading">Repetitive tasks were eating writing time</h2>
+      <div class="cs-body">
+        <p>Two recurring tasks consumed a disproportionate amount of writing time across the SAP User Assistance team: writing alt text for UI screenshots and drafting release notes from Jira tickets.</p>
+        <p><strong>Alt text</strong> was often skipped entirely or written inconsistently. Writers defaulted to phrases like "Image of Report Center" — meaningless to screen reader users — or wrote verbose descriptions that buried the functional detail. There was no shared standard, no word limit, and no guidance on what to focus on.</p>
+        <p><strong>Release notes</strong> required writers to read each Jira ticket, interpret engineering language, translate it into customer-facing copy, and reformat it into the SAP UA template — a slow, mechanical task repeated dozens of times per release across six release cycles a year.</p>
+        <p>Both tasks had clear inputs, well-defined outputs, and existing quality standards that could be encoded directly into a prompt — making them strong candidates for AI assistance.</p>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Process</span>
+      <h2 class="cs-heading">Encoding standards into a reusable prompt</h2>
+      <ul class="cs-list">
+        <li><strong>Role framing:</strong> Opened the prompt with an explicit role — "expert technical writer specialising in accessible, concise alt text for software documentation" — to prime the model for domain-appropriate output before any instructions were given.</li>
+        <li><strong>Hard constraint on length:</strong> Set a 25-word maximum and present tense requirement. Most alt-text failures are caused by over-description; the word cap forces the model to prioritise the one functional detail that matters.</li>
+        <li><strong>Explicit banned phrases:</strong> Listed the exact phrases that produce useless output — "image of," "screenshot showing," "displays," "shows," "displayed," "showing" — rather than saying "be concise." Negative constraints are more reliable than positive tone guidance.</li>
+        <li><strong>Audience framing:</strong> Included the instruction "assume your audience relies on your description to understand or interact with the content" — reorienting the model away from visual description toward functional utility.</li>
+        <li><strong>Multi-screenshot handling:</strong> Added a labelling convention (Screenshot 1: / Screenshot 2:) so the prompt scales to batch inputs without producing ambiguous output.</li>
+        <li><strong>Testing &amp; rollout:</strong> Validated across screenshot types — dashboards, dialogs, error states, configuration panels. Documented in Confluence with usage guidance and example outputs; adopted globally across SAP User Assistance teams.</li>
+      </ul>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Outcome</span>
+      <h2 class="cs-heading">Two templates, global adoption</h2>
+      <div class="outcome-box">
+        <div class="outcome-row">
+          <span class="outcome-num">Global</span>
+          <span class="outcome-text">Both prompt templates adopted across SAP User Assistance teams globally — the alt-text prompt became part of the standard authoring workflow for writers adding screenshots to documentation.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">Consistent</span>
+          <span class="outcome-text">Alt text quality standardised across teams — WCAG-compliant descriptions replacing inconsistent or missing alt text across SAP product documentation.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">Faster</span>
+          <span class="outcome-text">Release note drafting time reduced — writers provide Jira ticket data and receive a formatted first draft, reviewing and editing rather than starting from a blank template.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="case-footer">
+    <span class="footer-copy">© 2026 Sanjuna Sunil</span>
+    <nav class="footer-nav">
+      <a href="google-ads.html">← Previous project</a>
+      <a href="../index.html#work">All work ↑</a>
+    </nav>
+  </footer>
+
+  <style>
+    .workflow-animation {
+      background: #1a1033;
+      padding: 1.5rem 2rem;
+    }
+
+    /* ── Outcome artifact ── */
+    .outcome-artifact {
+      background: var(--bg);
+      border-top: 1px solid var(--rule);
+    }
+
+    .oa-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 2.5rem 0;
+    }
+
+    .oa-label-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .oa-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--banner-bg);
+      color: var(--banner-fg);
+      padding: 0.25rem 0.65rem;
+      border-radius: 3px;
+      opacity: 0.85;
+    }
+
+    .oa-note {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+
+    .oa-frame {
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+
+    .oa-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .oa-breakdown {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--rule);
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+    }
+
+    .oa-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.9rem 1.25rem;
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+      border-right: 1px solid var(--rule);
+      border-top: 1px solid var(--rule);
+    }
+
+    .oa-point:nth-child(even) { border-right: none; }
+
+    .oa-point strong { color: var(--ink); font-weight: 600; }
+
+    .oa-icon {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #7ecb8f;
+      flex-shrink: 0;
+      padding-top: 0.1rem;
+    }
+
+    @media (max-width: 600px) {
+      .oa-inner { padding: 2rem 1.25rem 0; }
+      .oa-breakdown { grid-template-columns: 1fr; }
+      .oa-point { border-right: none; }
+    }
+
+    .wf-tabs {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 0.75rem;
+    }
+
+    .wf-tab {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      color: rgba(255,255,255,0.4);
+      padding: 0.3rem 0.8rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .wf-tab.active,
+    .wf-tab:hover {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.85);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .wf-panel {
+      display: grid;
+      grid-template-columns: 1fr 24px 1fr 24px 1fr;
+      gap: 0.5rem;
+      align-items: start;
+    }
+
+    .wf-panel--hidden { display: none; }
+
+    .wf-col-label {
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 0.6rem;
+    }
+
+    .wf-col-arrow {
+      color: rgba(255,255,255,0.2);
+      font-size: 1rem;
+      text-align: center;
+      padding-top: 1.8rem;
+    }
+
+    .wf-image-mock {
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .wf-img-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .wf-img-caption {
+      font-size: 0.62rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .wf-prompt-block {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-left: 2px solid rgba(240,192,64,0.4);
+      border-radius: 4px;
+      padding: 0.75rem;
+    }
+
+    .wf-prompt-line {
+      font-family: 'Courier New', monospace;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    .wf-role-line {
+      display: block;
+      color: rgba(240,192,64,0.85);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    .wf-output-block {
+      background: rgba(126,203,143,0.07);
+      border: 1px solid rgba(126,203,143,0.2);
+      border-radius: 4px;
+      padding: 0.75rem;
+    }
+
+    .wf-output-text {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+    }
+
+    .wf-jira-block {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .wf-jira-key {
+      font-family: monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(126,203,143,0.8);
+    }
+
+    .wf-jira-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .wf-jira-label {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .wf-jira-val {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    @media (max-width: 700px) {
+      .wf-panel { grid-template-columns: 1fr; }
+      .wf-col-arrow { transform: rotate(90deg); }
+    }
+  </style>
+
+  <script>
+    function switchTab(n) {
+      document.querySelectorAll('.wf-tab').forEach((t, i) => t.classList.toggle('active', i + 1 === n));
+      document.querySelectorAll('.wf-panel').forEach((p, i) => p.classList.toggle('wf-panel--hidden', i + 1 !== n));
+    }
+  </script>
+
+</body>
+</html>
