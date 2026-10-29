@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Text Review &amp; Accessibility Audit — Sanjuna Sunil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="../index.html" class="nav-back">← Back to portfolio</a>
+    <span class="nav-title">Sanjuna Sunil</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-meta">
+        <span class="case-tag">UI Text</span>
+        <span class="case-tag">Accessibility</span>
+        <span class="case-tag">SAP Labs India</span>
+      </div>
+      <h1 class="case-title">UI Text Review &amp;<br>Accessibility Audit</h1>
+      <p class="case-summary">Reviewed UI text and flagged accessibility issues in a redesigned sharing experience — findings led the design team to create a new header pattern and helped document the process in a pattern library.</p>
+    </div>
+
+    <div class="case-stats">
+      <div class="case-stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Accessibility issues flagged</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">1</span>
+        <span class="stat-label">New header pattern created</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">Pattern</span>
+        <span class="stat-label">Library contribution</span>
+      </div>
+      <div class="case-stat">
+        <span class="stat-num">Design</span>
+        <span class="stat-label">Team collaboration</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUAL -->
+  <div class="case-visual">
+    <div class="visual-frame">
+      <div class="audit-animation">
+
+        <div class="audit-col">
+          <div class="audit-col-label">Issues flagged</div>
+          <div class="audit-issue audit-issue--flag">
+            <span class="audit-issue-tag">Focus order</span>
+            <p>Keyboard focus skipped the new header element — users navigating without a mouse would bypass a key control entirely.</p>
+          </div>
+          <div class="audit-issue audit-issue--flag">
+            <span class="audit-issue-tag">Back navigation</span>
+            <p>The back button label was unclear about where it would take the user — a common issue in redesigned flows where the destination changes.</p>
+          </div>
+        </div>
+
+        <div class="audit-arrow">→</div>
+
+        <div class="audit-col">
+          <div class="audit-col-label">Outcomes</div>
+          <div class="audit-issue audit-issue--pass">
+            <span class="audit-issue-tag">New header pattern</span>
+            <p>Design team created a new header component to resolve the navigation ambiguity — usable across the product, not just this one flow.</p>
+          </div>
+          <div class="audit-issue audit-issue--pass">
+            <span class="audit-issue-tag">Pattern library</span>
+            <p>The process was documented and added to the pattern library — giving future designers a reusable reference for similar navigation patterns.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="case-body">
+
+    <div class="case-section">
+      <span class="cs-label">The Problem</span>
+      <h2 class="cs-heading">A redesigned flow with new UX gaps</h2>
+      <div class="cs-body">
+        <p>A sharing experience in SAP SuccessFactors was undergoing a redesign — new layout, new controls, new navigation patterns. UI text review was part of the process, but the review surfaced issues that went beyond copy: the redesign had introduced accessibility problems that needed design-level fixes, not just wording changes.</p>
+        <p>Two issues stood out. First, the <strong>keyboard focus order</strong> skipped the new header element — meaning users who navigate without a mouse would miss a key interactive control entirely, a direct WCAG failure. Second, the <strong>back navigation label</strong> was ambiguous: in the redesigned flow, the back button no longer returned to the expected previous screen, but the label gave no indication of where it would actually go.</p>
+        <p>Both issues were invisible during design — they only became visible when you read the interface the way a screen reader or keyboard user would, which is exactly what a UI text review is for.</p>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Process</span>
+      <h2 class="cs-heading">Text review as accessibility signal</h2>
+      <ul class="cs-list">
+        <li><strong>Reading the flow as a user:</strong> Walked through the redesigned sharing experience as a keyboard and screen reader user would — not just reading the copy, but testing the tab order and verifying that each control's label matched what it actually did.</li>
+        <li><strong>Documenting findings with context:</strong> Flagged both issues with specific detail — which element was skipped, what the current back label said, what a user would expect versus what would actually happen. Framed as user impact, not just a list of mistakes.</li>
+        <li><strong>Handing off to design:</strong> Shared findings with the design team with enough context that they could act without a separate meeting — clear screenshots, the expected behaviour, and the WCAG criterion involved.</li>
+        <li><strong>Design response:</strong> The team used the back navigation finding as the starting point for a new header pattern — solving the problem in a way that could be reused across the product, not just patched in this one flow.</li>
+        <li><strong>Pattern library contribution:</strong> Documented the new pattern and the reasoning behind it, helping the team build out the pattern library and giving future designers a reference for navigation patterns in redesigned flows.</li>
+      </ul>
+    </div>
+
+    <div class="case-section">
+      <span class="cs-label">The Outcome</span>
+      <h2 class="cs-heading">A bug fix that became a design system contribution</h2>
+      <div class="outcome-box">
+        <div class="outcome-row">
+          <span class="outcome-num">New pattern</span>
+          <span class="outcome-text">The back navigation finding prompted the design team to create a new header pattern — a reusable component now available across the product, not just a local fix.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">Documented</span>
+          <span class="outcome-text">The pattern and its rationale were added to the product's pattern library — a lasting reference for designers working on navigation in redesigned flows.</span>
+        </div>
+        <div class="outcome-row">
+          <span class="outcome-num">Accessible</span>
+          <span class="outcome-text">Keyboard focus order corrected before release — a WCAG failure caught during text review rather than in a separate accessibility audit.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="case-footer">
+    <span class="footer-copy">© 2026 Sanjuna Sunil</span>
+    <nav class="footer-nav">
+      <a href="ai-content-workflows.html">← Previous project</a>
+      <a href="../index.html#work">All work ↑</a>
+    </nav>
+  </footer>
+
+  <style>
+    .audit-animation {
+      background: #1c1c2e;
+      padding: 2rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .audit-col-label {
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 0.75rem;
+    }
+
+    .audit-arrow {
+      color: rgba(255,255,255,0.15);
+      font-size: 1.25rem;
+      text-align: center;
+      padding-top: 1.75rem;
+    }
+
+    .audit-issue {
+      border-radius: 6px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 0.75rem;
+      border: 1px solid transparent;
+    }
+
+    .audit-issue-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      margin-bottom: 0.5rem;
+    }
+
+    .audit-issue p {
+      font-size: 0.78rem;
+      line-height: 1.55;
+    }
+
+    .audit-issue--flag {
+      background: rgba(224,85,85,0.07);
+      border-color: rgba(224,85,85,0.25);
+    }
+
+    .audit-issue--flag .audit-issue-tag {
+      background: rgba(224,85,85,0.2);
+      color: #e07070;
+    }
+
+    .audit-issue--flag p { color: rgba(255,255,255,0.6); }
+
+    .audit-issue--pass {
+      background: rgba(126,203,143,0.06);
+      border-color: rgba(126,203,143,0.25);
+    }
+
+    .audit-issue--pass .audit-issue-tag {
+      background: rgba(126,203,143,0.15);
+      color: #7ecb8f;
+    }
+
+    .audit-issue--pass p { color: rgba(255,255,255,0.6); }
+
+    @media (max-width: 680px) {
+      .audit-animation {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+      .audit-arrow { transform: rotate(90deg); text-align: left; }
+    }
+  </style>
+
+</body>
+</html>
