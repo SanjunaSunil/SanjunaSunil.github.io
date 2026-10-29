@@ -469,6 +469,49 @@ body {
 .work-img--ads    { background: #1e3a5f; }
 .work-img--cases  { background: #2d1a0e; }
 .work-img--prompt { background: #0f2818; }
+.work-img--uitext { background: #1c1c2e; }
+
+/* UI text mockup */
+.uitext-mockup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  width: 100%;
+  max-width: 280px;
+}
+
+.uitext-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.78rem;
+}
+
+.uitext-row--flag {
+  border-color: rgba(224,85,85,0.35);
+  background: rgba(224,85,85,0.07);
+}
+
+.uitext-row--out {
+  border-color: rgba(126,203,143,0.3);
+  background: rgba(126,203,143,0.06);
+}
+
+.uitext-icon {
+  font-size: 0.75rem;
+  color: #e05555;
+  flex-shrink: 0;
+}
+
+.uitext-icon--pass { color: #7ecb8f; }
+
+.uitext-label {
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
 
 .work-img-inner {
   width: 100%;
