@@ -48,37 +48,40 @@
     </div>
   </section>
 
-  <!-- VISUAL -->
+  <!-- ARTIFACT: REAL SCREENS -->
   <div class="case-visual">
-    <div class="visual-frame">
-      <div class="audit-animation">
-
-        <div class="audit-col">
-          <div class="audit-col-label">Issues flagged</div>
-          <div class="audit-issue audit-issue--flag">
-            <span class="audit-issue-tag">Focus order</span>
-            <p>Keyboard focus skipped the new header element — users navigating without a mouse would bypass a key control entirely.</p>
-          </div>
-          <div class="audit-issue audit-issue--flag">
-            <span class="audit-issue-tag">Back navigation</span>
-            <p>The back button label was unclear about where it would take the user — a common issue in redesigned flows where the destination changes.</p>
-          </div>
-        </div>
-
-        <div class="audit-arrow">→</div>
-
-        <div class="audit-col">
-          <div class="audit-col-label">Outcomes</div>
-          <div class="audit-issue audit-issue--pass">
-            <span class="audit-issue-tag">New header pattern</span>
-            <p>Design team created a new header component to resolve the navigation ambiguity — usable across the product, not just this one flow.</p>
-          </div>
-          <div class="audit-issue audit-issue--pass">
-            <span class="audit-issue-tag">Pattern library</span>
-            <p>The process was documented and added to the pattern library — giving future designers a reusable reference for similar navigation patterns.</p>
+    <div class="artifact-wrapper">
+      <div class="artifact-label-row">
+        <span class="artifact-badge">Design screens reviewed</span>
+        <span class="artifact-note">Share File redesign — User, Group, Role tabs + Granted Access + Filters panels</span>
+      </div>
+      <div class="visual-frame">
+        <img src="../assets/sharing-experience-screens.png"
+             alt="Five panels from the Share File redesign: User, Group, and Role tabs for adding access, a Granted Access list showing six users with role dropdowns, and a Filters panel with Department, Division, Location, User Role, and Active Users fields."
+             class="artifact-img" />
+      </div>
+      <div class="artifact-annotations">
+        <div class="annotation">
+          <span class="ann-num">1</span>
+          <div class="ann-text">
+            <strong>Focus order — skips header</strong>
+            The tab strip (User / Group / Role) introduced a new interactive header element. Keyboard focus skipped it entirely — a WCAG 2.1 SC 2.4.3 failure that would prevent keyboard users from switching tabs without a mouse.
           </div>
         </div>
-
+        <div class="annotation">
+          <span class="ann-num">2</span>
+          <div class="ann-text">
+            <strong>Back navigation — unclear destination</strong>
+            The back arrow on the Granted Access and Filters panels lacked a destination label. In a redesigned flow where back no longer returns to the previous screen, the label "←" alone doesn't tell the user where they'll go — a gap flagged for both copy and UX.
+          </div>
+        </div>
+        <div class="annotation">
+          <span class="ann-num">3</span>
+          <div class="ann-text">
+            <strong>Outcome — new header pattern</strong>
+            The design team used the back navigation finding as the basis for a new header component — resolving the ambiguity in a reusable way across the product, not just this one flow. The pattern was documented in the product's pattern library.
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -138,84 +141,88 @@
   </footer>
 
   <style>
-    .audit-animation {
-      background: #1c1c2e;
-      padding: 2rem 2.5rem;
-      display: grid;
-      grid-template-columns: 1fr 40px 1fr;
-      gap: 1rem;
-      align-items: start;
+    /* ── Artifact section ── */
+    .artifact-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 0;
     }
 
-    .audit-col-label {
-      font-size: 0.6rem;
+    .artifact-label-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .artifact-badge {
+      font-size: 0.65rem;
       font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      margin-bottom: 0.75rem;
-    }
-
-    .audit-arrow {
-      color: rgba(255,255,255,0.15);
-      font-size: 1.25rem;
-      text-align: center;
-      padding-top: 1.75rem;
-    }
-
-    .audit-issue {
-      border-radius: 6px;
-      padding: 0.9rem 1rem;
-      margin-bottom: 0.75rem;
-      border: 1px solid transparent;
-    }
-
-    .audit-issue-tag {
-      display: inline-block;
-      font-size: 0.6rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.15rem 0.5rem;
+      color: var(--banner-fg);
+      background: var(--banner-bg);
+      padding: 0.25rem 0.65rem;
       border-radius: 3px;
-      margin-bottom: 0.5rem;
+      opacity: 0.85;
     }
 
-    .audit-issue p {
-      font-size: 0.78rem;
-      line-height: 1.55;
+    .artifact-note {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      font-weight: 500;
     }
 
-    .audit-issue--flag {
-      background: rgba(224,85,85,0.07);
-      border-color: rgba(224,85,85,0.25);
+    .artifact-img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .audit-issue--flag .audit-issue-tag {
-      background: rgba(224,85,85,0.2);
-      color: #e07070;
+    .artifact-annotations {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 0;
+      border-top: 1px solid var(--rule);
     }
 
-    .audit-issue--flag p { color: rgba(255,255,255,0.6); }
-
-    .audit-issue--pass {
-      background: rgba(126,203,143,0.06);
-      border-color: rgba(126,203,143,0.25);
+    .annotation {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
     }
 
-    .audit-issue--pass .audit-issue-tag {
-      background: rgba(126,203,143,0.15);
-      color: #7ecb8f;
+    .ann-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--ink);
+      opacity: 0.15;
+      line-height: 1;
+      padding-top: 0.1rem;
     }
 
-    .audit-issue--pass p { color: rgba(255,255,255,0.6); }
+    .ann-text {
+      font-size: 0.875rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+    }
+
+    .ann-text strong {
+      display: block;
+      color: var(--ink);
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      font-size: 0.9rem;
+    }
 
     @media (max-width: 680px) {
-      .audit-animation {
-        grid-template-columns: 1fr;
-        padding: 1.5rem 1.25rem;
-      }
-      .audit-arrow { transform: rotate(90deg); text-align: left; }
+      .artifact-wrapper { padding: 2rem 1.25rem 0; }
     }
   </style>
 
