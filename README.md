@@ -1,6 +1,6 @@
 # Sanjuna Sunil — Portfolio Site
 
-Personal portfolio site for **Sanjuna Sunil**, User Assistance Developer, Content Designer, and AI & Knowledge Strategist with 11+ years of experience in enterprise software documentation and AI content quality.
+Personal portfolio site for **Sanjuna Sunil**, Senior Technical Writer with 11 years of experience in enterprise SaaS documentation — authored in DITA, managed in IxiaSoft CCMS, and delivered across SAP SuccessFactors product lines.
 
 Live site: [sanjunasunil.github.io](https://sanjunasunil.github.io)
 
@@ -8,26 +8,28 @@ Live site: [sanjunasunil.github.io](https://sanjunasunil.github.io)
 
 ## What's on the site
 
-- **About** — Professional summary, stats (500 customer cases analyzed, 10% support case reduction)
-- **Skills** — AI Evaluation & Prompt Engineering, Knowledge & Content Strategy, Developer Documentation, Tools & Collaboration
-- **Portfolio** — Google Ads AI Response Evaluation and Guardrails (live demo + GitHub)
+- **Published guides** — Four live SAP Help Portal guides across SuccessFactors reporting products
+- **Work** — Four case studies with detailed write-ups, animated mockups, and real published artifacts
+- **Skills** — Structured authoring, AI content workflows, technical & UX content, collaboration
 - **Experience** — SAP Labs India, Blue Yonder, Cognizant
-- **Education & Certifications** — Bharathiyar University; Google Ads Certification; Google Prompt Essentials Certification
-- **Contact** — Email and GitHub
+- **About** — Education, certifications, tools, and contact
 
 ---
 
-## Featured project
+## Case studies
 
-**Google Ads AI Response Evaluation and Guardrails**
-Live app: [ads-evaluator.web.app](https://ads-evaluator.web.app)
-GitHub: [google-ads-ai-knowledge-strategist-project](https://github.com/SanjunaSunil/google-ads-ai-knowledge-strategist-project)
-
-An end-to-end AI knowledge strategy project demonstrating RAG knowledge base design, intent classification, prompt engineering, and LLM-as-a-Judge evaluation — built on real Google Ads policy content.
+| Project | Focus |
+|---|---|
+| [Joule Agent Conversation Evaluation](work/joule-eval.html) | Built evaluation guidelines for SAP's AI assistant; reduced review time from 2h to 1h |
+| [Customer Case Analysis & Self-Service Redesign](work/case-reduction.html) | Analysed 500 support cases; content redesign contributed to 10% case reduction |
+| [Google Ads AI Knowledge Framework](work/google-ads.html) | RAG knowledge base design, intent classification, and prompt evaluation framework |
+| [AI-Assisted Content Workflows](work/ai-content-workflows.html) | Alt-text and release note prompt templates adopted globally across SAP User Assistance |
 
 ---
 
 ## Tech
 
 - Plain HTML + CSS (no framework, no build step)
+- Barlow Condensed + Barlow from Google Fonts
+- Three colour themes (pink / sand / mint) via CSS custom properties
 - Hosted on GitHub Pages from the `main` branch
